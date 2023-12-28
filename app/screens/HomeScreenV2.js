@@ -6,7 +6,6 @@ import { MainAppStyles } from '../styles/styles.js'
 
 var MenuName = "Home V2";
 
-
 function HomeScreen(props) {
     return (
     <View style={MainAppStyles.screen}>
