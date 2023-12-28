@@ -84,11 +84,28 @@ export const MainAppStyles = StyleSheet.create({
         marginTop: -8,
     },
 
-    screenHeader:{
+    contentWindow:{
         top: 150,
         left: 30,
+        right: 30,
+        bottom: 100,
+    },
+    screenHeader:{
+        top: 0,
+        left: 0,
         color: "#ffffff",
         fontSize: 20,
         fontWeight: 900,
-    }
+    },
+
+    //Nur vorübergehend, danach separat (refactoring)
+    deckContainer:{
+        top: 20,
+        width: 325,
+        height: 110,
+        backgroundColor: "#ffffff",
+        borderRadius: 15,
+        paddingTop: 10,
+        paddingLeft: 10,
+    },
 })

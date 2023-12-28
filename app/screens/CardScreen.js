@@ -28,8 +28,12 @@ function CardScreen(){
                 </SafeAreaView>
             </View>
 
-            <View>
+            <View style={MainAppStyles.contentWindow}>
                 <Text style={MainAppStyles.screenHeader}>Decks</Text>
+
+                <View style={MainAppStyles.deckContainer}>
+                    <Text>Text</Text>
+                </View>
             </View>
 
             <View style={MainAppStyles.bottomMenu}>
