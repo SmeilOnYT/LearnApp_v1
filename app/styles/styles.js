@@ -9,8 +9,8 @@ const MenuBackgroundStrokeColor = "#838383";
 export const MainAppStyles = StyleSheet.create({
     screen:{
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: "left",
+        alignItems: "left",
         backgroundColor: BaseBackgroundColor,
     },
     topMenu:{
@@ -83,4 +83,12 @@ export const MainAppStyles = StyleSheet.create({
         height: 35,
         marginTop: -8,
     },
+
+    screenHeader:{
+        top: 150,
+        left: 30,
+        color: "#ffffff",
+        fontSize: 20,
+        fontWeight: 900,
+    }
 })
