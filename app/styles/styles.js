@@ -108,4 +108,12 @@ export const MainAppStyles = StyleSheet.create({
         paddingTop: 10,
         paddingLeft: 10,
     },
+
+    deckListContainer:{
+        top: 20,
+        width: 325,
+        paddingTop: 10,
+        paddingLeft: 10,
+        backgroundColor: "#666666",
+    },
 })
