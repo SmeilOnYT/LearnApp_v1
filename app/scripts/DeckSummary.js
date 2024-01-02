@@ -1,3 +1,13 @@
 import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 
-const DeckSummary = ({});
+import { MainAppStyles } from '../styles/styles.js'
+
+const DeckSummary = ({name, description}) => {
+    return (
+        <View style={MainAppStyles.deckContainer}>
+            <Text>{name}</Text>
+            <Text>{description}</Text>
+        </View>
+    );
+};
