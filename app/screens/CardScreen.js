@@ -2,6 +2,11 @@ import React from 'react';
 import { SafeAreaView, TouchableHighlight, View, StyleSheet, Text, Image } from 'react-native';
 
 import { MainAppStyles } from '../styles/styles.js'
+import DecksList from "../scripts/DeckList.js"
+
+let decks = [
+    { name: "Deck 1", description: "Description 1"},
+];
 
 function CardScreen(){
     return (
@@ -29,11 +34,7 @@ function CardScreen(){
             </View>
 
             <View style={MainAppStyles.contentWindow}>
-                <Text style={MainAppStyles.screenHeader}>Decks</Text>
-
-                <View style={MainAppStyles.deckContainer}>
-                    <Text>Text</Text>
-                </View>
+                <DecksList decks = {decks} />
             </View>
 
             <View style={MainAppStyles.bottomMenu}>

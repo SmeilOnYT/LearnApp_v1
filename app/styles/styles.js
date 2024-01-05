@@ -100,8 +100,8 @@ export const MainAppStyles = StyleSheet.create({
 
     //Nur vorübergehend, danach separat (refactoring)
     deckContainer:{
-        top: 20,
-        width: 325,
+        top: 0,
+        width: 335,
         height: 110,
         backgroundColor: "#ffffff",
         borderRadius: 15,
@@ -109,11 +109,7 @@ export const MainAppStyles = StyleSheet.create({
         paddingLeft: 10,
     },
 
-    deckListContainer:{
-        top: 20,
-        width: 325,
-        paddingTop: 10,
-        paddingLeft: 10,
-        backgroundColor: "#666666",
+    deckText:{
+        color: "#000000",
     },
 })

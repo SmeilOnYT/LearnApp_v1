@@ -6,8 +6,10 @@ import { MainAppStyles } from '../styles/styles.js'
 const DeckSummary = ({name, description}) => {
     return (
         <View style={MainAppStyles.deckContainer}>
-            <Text>{name}</Text>
+            <Text style={MainAppStyles.deckText}>{name}</Text>
             <Text>{description}</Text>
         </View>
     );
 };
+
+export default DeckSummary;
