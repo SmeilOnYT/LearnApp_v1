@@ -6,6 +6,8 @@ import DecksList from "../scripts/DeckList.js"
 
 let decks = [
     { name: "Deck 1", description: "Description 1"},
+    { name: "Deck 2", description: "Description 2"},
+    { name: "Deck 3", description: "Description 3"},
 ];
 
 function CardScreen(){

@@ -97,19 +97,4 @@ export const MainAppStyles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 900,
     },
-
-    //Nur vorübergehend, danach separat (refactoring)
-    deckContainer:{
-        top: 0,
-        width: 335,
-        height: 110,
-        backgroundColor: "#ffffff",
-        borderRadius: 15,
-        paddingTop: 10,
-        paddingLeft: 10,
-    },
-
-    deckText:{
-        color: "#000000",
-    },
 })
