@@ -18,6 +18,7 @@ export const DeckSummaryStyles = StyleSheet.create({
         fontSize: 18,
         marginBottom: 5,
         fontFamily: "Montserrat-Regular",
+        fontWeight: 900,
     },
     deckDescription:{
         color: "#ffffff",
