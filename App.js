@@ -15,7 +15,7 @@ export default function App() {
       try {
         // Pre-load fonts, make any API calls you need to do here
         await Font.loadAsync({
-          'Montserrat-Regular': require("./app/assets/fonts/Montserrat-VariableFont_wght.tff")
+          'Montserrat-Regular': require("./app/assets/fonts/Montserrat-VariableFont_wght.ttf")
         });
       } catch (e) {
         console.warn(e);
