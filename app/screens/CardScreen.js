@@ -7,33 +7,25 @@ import DecksList from "../scripts/DeckList.js"
 /*
     All of the variables will be removed later on and everything will be stored inside the Array.
 */
-//Deck 1 Info
-const deck1CardCount = 20;
-const deck1RightCount = 10;
-
-//Deck 2 Info
-const deck2CardCount = 0;
-
-//Deck 3 Info
-const deck3CardCount = 0;
 
 //
 let decks = [
     { 
         name: "Deck 1", 
         description: "Description 1", 
-        deckCardCount: deck1CardCount, 
+        deckCardCount: 0, 
         deckRightCardCount: 0,
-        deckProgress: DeckProgressPercentage(10, deck1RightCount), 
-        deckProgressNum: DeckProgressBar(10, deck1RightCount)
+        deckProgress: null, 
+        deckProgressNum: null,
     },
     { 
         name: "Deck 2", 
         description: "Description 2", 
-        deckCardCount: deck2CardCount, 
+        deckCardCount: 0, 
         deckRightCardCount: 0,
         deckProgress: "0%", 
-        deckProgressNum: DeckProgressBar(deck1CardCount, deck1RightCount)},
+        deckProgressNum: null,
+    },
 ];
 
 function DeckProgressBar(CardCount, RightCount){
@@ -59,19 +51,28 @@ function DeckProgressPercentage(CardCount, RightCount){
 }
 
 function LoadDeckProgress(SavedDeckArray){
+    //Load Deck Array if not empty
     if(SavedDeckArray != null){
+        //Load All Deck Array Data
         for(i = 0; i < SavedDeckArray.length; i++){
-            decks[0].name = SavedDeckArray[0].name;
-            decks[0].description = SavedDeckArray[0].description;
-            decks[0].deckCardCount = SavedDeckArray[0].deckCardCount;
-            decks[0].deckProgress = SavedDeckArray[0].deckProgress;
-            decks[0].deckProgressNum = SavedDeckArray[0].deckProgressNum;
+            decks[i].name = SavedDeckArray[i].name;
+            decks[i].description = SavedDeckArray[i].description;
+            decks[i].deckCardCount = SavedDeckArray[i].deckCardCount;
+            decks[i].deckRightCardCount = SavedDeckArray[i].deckRightCardCount;
+        }
+
+        for(i = 0; i < decks.length; i++){
+            decks[i].deckProgress = DeckProgressPercentage(decks[i].deckCardCount, decks[i].deckRightCardCount);
+            decks[i].deckProgressNum = DeckProgressBar(decks[i].deckCardCount, decks[i].deckRightCardCount);
         }
     }
     else if (SavedDeckArray = null){
         console.warn("No Decks Found");
-    }
-    
+    }  
+}
+
+function UpdateDeckProgress(Decks){
+
 }
 
 function CardScreen(){
