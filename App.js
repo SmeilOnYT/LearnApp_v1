@@ -15,13 +15,18 @@ export default function App() {
       try {
         // Pre-load fonts, make any API calls you need to do here
         await Font.loadAsync({
-          'Montserrat-Regular': require("./app/assets/fonts/Montserrat-VariableFont_wght.ttf")
+          'Montserrat': require("./app/assets/fonts/Montserrat-VariableFont_wght.ttf"),
+          'Poppins-Regular': require("./app/assets/fonts/Poppins-Regular.ttf"),
+          'Poppins-Light': require("./app/assets/fonts/Poppins-Light.ttf"),
+          'Poppins-Light': require("./app/assets/fonts/Poppins-Light.ttf"),
+          'Poppins-SemiBold': require("./app/assets/fonts/Poppins-SemiBold.ttf"),
         });
       } catch (e) {
         console.warn(e);
+        console.error("Error loading fonts: ", error)
       } finally {
         // Tell the application to render
-        setAppIsReady(true);
+        setAppIsReady(true); 
       }
     }
 

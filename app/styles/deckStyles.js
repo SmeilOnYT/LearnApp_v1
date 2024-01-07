@@ -9,21 +9,23 @@ export const DeckSummaryStyles = StyleSheet.create({
         height: 115,
         backgroundColor: ContentBackgroundColor,
         borderRadius: 15,
-        paddingTop: 12,
+        paddingTop: 10,
         paddingLeft: 12,
         marginBottom: 15,
     },
     deckTitle:{
         color: "#ffffff",
         fontSize: 18,
-        marginBottom: 5,
-        fontFamily: "Montserrat-Regular",
-        fontWeight: 900,
+        marginBottom: 3,
+
+        fontFamily: "Poppins-SemiBold",
     },
     deckDescription:{
         color: "#ffffff",
         fontSize: 14,
         marginBottom: 8,
+
+        fontFamily: "Poppins-Light",
     },
     deckCardCount:{
         color: "#ffffff",
@@ -31,18 +33,22 @@ export const DeckSummaryStyles = StyleSheet.create({
         flex: 1,
         textAlign: "left",
         fontStyle: "italic",
+
+        fontFamily: "Poppins-Light",
     },
     deckProgress:{
         color: "#ffffff",
         fontSize: 14,
         fontStyle: "italic",
+
+        fontFamily: "Poppins-Light",
     },
     deckCardCountProgressContainer:{
         justifyContent: "space-evenly",
         flexDirection: "row",
         width: 311,
         marginBottom: 5,
-        marginTop: 8,
+        marginTop: 5,
 
     },
     deckProgressBarBG:{

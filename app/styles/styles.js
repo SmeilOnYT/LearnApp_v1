@@ -55,6 +55,7 @@ export const MainAppStyles = StyleSheet.create({
         color: "#ffffff",
         fontWeight: "bold",
         fontSize: 18,
+        fontFamily: "Poppins-SemiBold",
     },
 
     bottomMenu:{

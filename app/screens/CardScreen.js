@@ -4,10 +4,14 @@ import { SafeAreaView, TouchableHighlight, View, StyleSheet, Text, Image } from 
 import { MainAppStyles } from '../styles/styles.js'
 import DecksList from "../scripts/DeckList.js"
 
+const  deck1CardCount = 0;
+const  deck2CardCount = 0;
+const  deck3CardCount = 0;
+
 let decks = [
-    { name: "Deck 1", description: "Description 1"},
-    { name: "Deck 2", description: "Description 2"},
-    { name: "Deck 3", description: "Description 3"},
+    { name: "Deck 1", description: "Description 1", deckCardCount: deck1CardCount, deckProgress: "0%", deckProgressNum: 100},
+    { name: "Deck 2", description: "Description 2", deckCardCount: deck2CardCount, deckProgress: "0%"},
+    { name: "Deck 3", description: "Description 3", deckCardCount: deck3CardCount, deckProgress: "0%"},
 ];
 
 function CardScreen(){
