@@ -4,15 +4,75 @@ import { SafeAreaView, TouchableHighlight, View, StyleSheet, Text, Image } from 
 import { MainAppStyles } from '../styles/styles.js'
 import DecksList from "../scripts/DeckList.js"
 
-const  deck1CardCount = 0;
-const  deck2CardCount = 0;
-const  deck3CardCount = 0;
+/*
+    All of the variables will be removed later on and everything will be stored inside the Array.
+*/
+//Deck 1 Info
+const deck1CardCount = 20;
+const deck1RightCount = 10;
 
+//Deck 2 Info
+const deck2CardCount = 0;
+
+//Deck 3 Info
+const deck3CardCount = 0;
+
+//
 let decks = [
-    { name: "Deck 1", description: "Description 1", deckCardCount: deck1CardCount, deckProgress: "0%", deckProgressNum: 100},
-    { name: "Deck 2", description: "Description 2", deckCardCount: deck2CardCount, deckProgress: "0%"},
-    { name: "Deck 3", description: "Description 3", deckCardCount: deck3CardCount, deckProgress: "0%"},
+    { 
+        name: "Deck 1", 
+        description: "Description 1", 
+        deckCardCount: deck1CardCount, 
+        deckRightCardCount: 0,
+        deckProgress: DeckProgressPercentage(10, deck1RightCount), 
+        deckProgressNum: DeckProgressBar(10, deck1RightCount)
+    },
+    { 
+        name: "Deck 2", 
+        description: "Description 2", 
+        deckCardCount: deck2CardCount, 
+        deckRightCardCount: 0,
+        deckProgress: "0%", 
+        deckProgressNum: DeckProgressBar(deck1CardCount, deck1RightCount)},
 ];
+
+function DeckProgressBar(CardCount, RightCount){
+    let percentage = RightCount/CardCount;
+    if(percentage >= 0.05)
+        return percentage * 311;
+    else 
+        return 12;
+}
+
+function DeckProgressPercentage(CardCount, RightCount){
+    percentage = RightCount/CardCount;
+    if(percentage > 1){
+        return "100%";
+        console.warn("Deck Percentage Overflow");
+    }
+    else if (percentage < 0){
+        return "0%";
+        console.warn("Deck Percentage below 0");
+    }
+    else return `${Math.round(percentage*100)}%`;
+        
+}
+
+function LoadDeckProgress(SavedDeckArray){
+    if(SavedDeckArray != null){
+        for(i = 0; i < SavedDeckArray.length; i++){
+            decks[0].name = SavedDeckArray[0].name;
+            decks[0].description = SavedDeckArray[0].description;
+            decks[0].deckCardCount = SavedDeckArray[0].deckCardCount;
+            decks[0].deckProgress = SavedDeckArray[0].deckProgress;
+            decks[0].deckProgressNum = SavedDeckArray[0].deckProgressNum;
+        }
+    }
+    else if (SavedDeckArray = null){
+        console.warn("No Decks Found");
+    }
+    
+}
 
 function CardScreen(){
     return (
