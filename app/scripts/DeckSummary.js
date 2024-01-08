@@ -5,18 +5,10 @@ import { useNavigation } from '@react-navigation/native';
 import { DeckSummaryStyles } from '../styles/deckStyles.js'
 
 
-
-
-
 const DeckSummary = ({name, description, deckCardCount, deckProgress, deckProgressNum}) => {
-    const navigation = useNavigation();
-
-    const goToAllCardScreen = () => {
-        navigation.navigate('AllCardScreen');
-    }
 
     return (
-        <TouchableOpacity style={DeckSummaryStyles.deckContainer} onPress={goToAllCardScreen}>
+        <TouchableOpacity style={DeckSummaryStyles.deckContainer}>
             <Text style={DeckSummaryStyles.deckTitle}>{name}</Text>
             <Text style={DeckSummaryStyles.deckDescription}>{description}</Text>
             <View style={DeckSummaryStyles.deckCardCountProgressContainer}>

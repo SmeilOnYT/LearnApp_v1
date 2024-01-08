@@ -7,7 +7,6 @@ import HomeScreen from './app/screens/HomeScreenV2';
 import CardScreen from './app/screens/CardScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
-import StackNavigation from './app/scripts/StackNavigation';
 
 
 export default function App() {
@@ -18,9 +17,9 @@ export default function App() {
       try {
         // Pre-load fonts, make any API calls you need to do here
         await Font.loadAsync({
-          'Poppins-Regular': require("./app/assets/fonts/Poppins-Regular.ttf"),
           'Poppins-Light': require("./app/assets/fonts/Poppins-Light.ttf"),
           'Poppins-LightItalic': require("./app/assets/fonts/Poppins-LightItalic.ttf"),
+          'Poppins-Regular': require("./app/assets/fonts/Poppins-Regular.ttf"),
           'Poppins-SemiBold': require("./app/assets/fonts/Poppins-SemiBold.ttf"),
         });
       } catch (e) {

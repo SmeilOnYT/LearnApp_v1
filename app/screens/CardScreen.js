@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, TouchableHighlight, View, StyleSheet, Text, Image, ScrollView } from 'react-native';
+import { SafeAreaView, View, Text, Image, ScrollView } from 'react-native';
 
 import { MainAppStyles } from '../styles/styles.js'
 import DecksList from "../scripts/DeckList.js"
