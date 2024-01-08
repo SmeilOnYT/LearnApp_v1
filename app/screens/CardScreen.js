@@ -24,6 +24,14 @@ let decks = [
         deckProgress: DeckProgressPercentage(null, null), 
         deckProgressNum: DeckProgressBar(null, null),
     },
+    { 
+        name: "Deck 3", 
+        description: "Description 3", 
+        deckCardCount: 0, 
+        deckRightCardCount: 0,
+        deckProgress: DeckProgressPercentage(null, null), 
+        deckProgressNum: DeckProgressBar(null, null),
+    },
 ];
 
 function DeckProgressBar(CardCount, RightCount){
@@ -105,7 +113,7 @@ function CardScreen(){
             <View style={MainAppStyles.bottomMenu}>
                 <SafeAreaView style={MainAppStyles.bottomMenuItemContainer}>
     
-                    <Image source={require("../assets/Icon_Learn_white_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>
+                    <Image source={require("../assets/Icon_Learn_white_selected_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>
                     <Image source={require("../assets/Icon_Habit_white_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>
                     <Image source={require("../assets/Icon_Home_white_outlines_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>
                     <Image source={require("../assets/Icon_Calendar_white_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>

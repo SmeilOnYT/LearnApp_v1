@@ -65,5 +65,19 @@ export const DeckSummaryStyles = StyleSheet.create({
         borderRadius: 50,
         width: 50,
     },
+
+    showMoreButton:{
+        top: 0,
+        width: 335,
+        height: 50,
+        backgroundColor: ContentBackgroundColor,
+        borderRadius: 15,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    showMoreButtonText:{
+        fontFamily: "Poppins-LightItalic",
+        color: "#ffffff",
+    },
 });
 

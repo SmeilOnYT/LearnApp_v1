@@ -2,7 +2,7 @@ import React from 'react';
 import { View, ScrollView, TouchableOpacity, Text } from 'react-native';
 
 import DeckSummary from './DeckSummary';
-import { MainAppStyles } from '../styles/styles.js'
+import { DeckSummaryStyles } from '../styles/deckStyles.js'
 
 const DeckList = ({decks}) => {
     return (
@@ -13,8 +13,8 @@ const DeckList = ({decks}) => {
                 ))}
             </View>
                 {decks.length > 2 && (
-                    <TouchableOpacity>
-                        <Text>Show More</Text>
+                    <TouchableOpacity style={DeckSummaryStyles.showMoreButton}>
+                        <Text style={DeckSummaryStyles.showMoreButtonText}>Show More</Text>
                     </TouchableOpacity>
                 )}
         </ScrollView>
