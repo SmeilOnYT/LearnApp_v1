@@ -1,12 +1,22 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { DeckSummaryStyles } from '../styles/deckStyles.js'
 
+
+
+
+
 const DeckSummary = ({name, description, deckCardCount, deckProgress, deckProgressNum}) => {
+    const navigation = useNavigation();
+
+    const goToAllCardScreen = () => {
+        navigation.navigate('AllCardScreen');
+    }
+
     return (
-        <View style={DeckSummaryStyles.deckContainer}>
+        <TouchableOpacity style={DeckSummaryStyles.deckContainer} onPress={goToAllCardScreen}>
             <Text style={DeckSummaryStyles.deckTitle}>{name}</Text>
             <Text style={DeckSummaryStyles.deckDescription}>{description}</Text>
             <View style={DeckSummaryStyles.deckCardCountProgressContainer}>
@@ -18,7 +28,7 @@ const DeckSummary = ({name, description, deckCardCount, deckProgress, deckProgre
                     <View style={[DeckSummaryStyles.deckProgressBar, { width: deckProgressNum }]} />
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 

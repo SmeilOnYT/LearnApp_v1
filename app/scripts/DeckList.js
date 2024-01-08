@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 
 import DeckSummary from './DeckSummary';
 import { DeckSummaryStyles } from '../styles/deckStyles.js'

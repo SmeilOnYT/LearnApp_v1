@@ -11,10 +11,10 @@ let decks = [
     { 
         name: "Deck 1", 
         description: "Description 1", 
-        deckCardCount: 0, 
-        deckRightCardCount: 0,
-        deckProgress: DeckProgressPercentage(null, null), 
-        deckProgressNum: DeckProgressBar(null, null),
+        deckCardCount: 20, 
+        deckRightCardCount: 10,
+        deckProgress: DeckProgressPercentage(20, 10), 
+        deckProgressNum: DeckProgressBar(20, 10),
     },
     { 
         name: "Deck 2", 
@@ -37,9 +37,9 @@ let decks = [
 function DeckProgressBar(CardCount, RightCount){
     let percentage = RightCount/CardCount;
     if(percentage >= 0.05)
-        return percentage * 311;
+        return percentage *  311; //Value by Design
     else 
-        return 12;
+        return 12; //Value by Design
 }
 
 function DeckProgressPercentage(CardCount, RightCount){
