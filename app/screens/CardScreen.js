@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, TouchableHighlight, View, StyleSheet, Text, Image } from 'react-native';
+import { SafeAreaView, TouchableHighlight, View, StyleSheet, Text, Image, ScrollView } from 'react-native';
 
 import { MainAppStyles } from '../styles/styles.js'
 import DecksList from "../scripts/DeckList.js"
@@ -106,9 +106,11 @@ function CardScreen(){
                 </SafeAreaView>
             </View>
 
-            <View style={MainAppStyles.contentWindow}>
+            <ScrollView style={MainAppStyles.contentWindow}>
+                <Text style={MainAppStyles.pageHeader}>Decks</Text>
                 <DecksList decks = {decks} />
-            </View>
+                <Text style={[MainAppStyles.pageHeader, {paddingTop: 25}]}>Learn</Text>
+            </ScrollView>
 
             <View style={MainAppStyles.bottomMenu}>
                 <SafeAreaView style={MainAppStyles.bottomMenuItemContainer}>

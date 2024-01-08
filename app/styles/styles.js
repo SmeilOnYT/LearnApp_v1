@@ -98,4 +98,10 @@ export const MainAppStyles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 900,
     },
+    pageHeader:{
+        fontFamily: "Poppins-SemiBold",
+        color: "#ffffff",
+        fontSize: 30,
+        paddingBottom: 15,
+    }
 })

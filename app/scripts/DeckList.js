@@ -6,7 +6,7 @@ import { DeckSummaryStyles } from '../styles/deckStyles.js'
 
 const DeckList = ({decks}) => {
     return (
-        <ScrollView>
+        <View>
             <View>
                 {decks.slice(0, 2).map((deck, index) => (
                 <DeckSummary key={index} {...deck} />
@@ -17,7 +17,7 @@ const DeckList = ({decks}) => {
                         <Text style={DeckSummaryStyles.showMoreButtonText}>Show More</Text>
                     </TouchableOpacity>
                 )}
-        </ScrollView>
+        </View>
     );
 };
 
