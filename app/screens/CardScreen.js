@@ -7,24 +7,22 @@ import DecksList from "../scripts/DeckList.js"
 /*
     All of the variables will be removed later on and everything will be stored inside the Array.
 */
-
-//
 let decks = [
     { 
         name: "Deck 1", 
         description: "Description 1", 
         deckCardCount: 0, 
         deckRightCardCount: 0,
-        deckProgress: null, 
-        deckProgressNum: null,
+        deckProgress: DeckProgressPercentage(null, null), 
+        deckProgressNum: DeckProgressBar(null, null),
     },
     { 
         name: "Deck 2", 
         description: "Description 2", 
         deckCardCount: 0, 
         deckRightCardCount: 0,
-        deckProgress: "0%", 
-        deckProgressNum: null,
+        deckProgress: DeckProgressPercentage(null, null), 
+        deckProgressNum: DeckProgressBar(null, null),
     },
 ];
 
@@ -42,7 +40,7 @@ function DeckProgressPercentage(CardCount, RightCount){
         return "100%";
         console.warn("Deck Percentage Overflow");
     }
-    else if (percentage < 0){
+    else if (percentage < 0 | CardCount == null | RightCount == null){
         return "0%";
         console.warn("Deck Percentage below 0");
     }
@@ -61,18 +59,18 @@ function LoadDeckProgress(SavedDeckArray){
             decks[i].deckRightCardCount = SavedDeckArray[i].deckRightCardCount;
         }
 
-        for(i = 0; i < decks.length; i++){
-            decks[i].deckProgress = DeckProgressPercentage(decks[i].deckCardCount, decks[i].deckRightCardCount);
-            decks[i].deckProgressNum = DeckProgressBar(decks[i].deckCardCount, decks[i].deckRightCardCount);
-        }
+        UpdateDeckProgress(decks);
     }
     else if (SavedDeckArray = null){
         console.warn("No Decks Found");
     }  
 }
 
-function UpdateDeckProgress(Decks){
-
+function UpdateDeckProgress(decks){
+    for(i = 0; i < decks.length; i++){
+        decks[i].deckProgress = DeckProgressPercentage(decks[i].deckCardCount, decks[i].deckRightCardCount);
+        decks[i].deckProgressNum = DeckProgressBar(decks[i].deckCardCount, decks[i].deckRightCardCount);
+    }
 }
 
 function CardScreen(){
