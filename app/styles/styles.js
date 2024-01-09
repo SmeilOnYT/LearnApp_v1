@@ -6,6 +6,8 @@ const BaseBackgroundColor = "#232323";
 const MenuBackgroundColor = "#535353";
 const MenuBackgroundStrokeColor = "#838383";
 
+const MenuPushUpward = 30;
+
 export const MainAppStyles = StyleSheet.create({
     screen:{
         flex: 1,
@@ -18,7 +20,7 @@ export const MainAppStyles = StyleSheet.create({
         top: 0,
         left: 0,
         right: 0,
-        height: 125,
+        height: 125 /*+ MenuPushUpward*/,
         backgroundColor: MenuBackgroundColor,
         borderRadius: MenuBorderRadius,
         borderWidth: MenuStrokeWidth,
@@ -27,12 +29,13 @@ export const MainAppStyles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingBottom: 30,
         paddingTop: 30,
+        //marginTop: -MenuPushUpward,
   
     },
     topMenuItemContainer:{
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: "center"
+        alignItems: "center",
     },
     topMenuProfile:{
         width: 50,
