@@ -7,6 +7,7 @@ import HomeScreen from './app/screens/HomeScreenV2';
 import CardScreen from './app/screens/CardScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
+import StackNavigation from './app/scripts/StackNavigation';
 
 
 export default function App() {
@@ -51,7 +52,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <CardScreen />
+      <StackNavigation />
     </NavigationContainer>
       
   );

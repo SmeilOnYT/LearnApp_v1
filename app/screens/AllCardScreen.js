@@ -1,5 +1,6 @@
 import React from 'react';
 import { SafeAreaView, TouchableHighlight, View, StyleSheet, Text, Image, ScrollView } from 'react-native';
+import { MainAppStyles } from '../styles/styles.js'
 
 function AllCardScreen(){
     return(
@@ -28,3 +29,5 @@ function AllCardScreen(){
         </View>
     );
 }
+
+export default AllCardScreen;
