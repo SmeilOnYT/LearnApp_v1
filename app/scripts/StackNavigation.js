@@ -14,7 +14,11 @@ const StackNavigation = () => {
                 component={CardScreen} 
                 options={{headerShown: false}}
             />
-            <Stack.Screen name='AllCardScreen' component={AllCardScreen} />
+            <Stack.Screen 
+                name='AllCardScreen' 
+                component={AllCardScreen} 
+                options={{headerShown: false}}
+            />
         </Stack.Navigator>
     )
 };
