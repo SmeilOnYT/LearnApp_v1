@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState, View } from 'react';
 //import Entypo from '@expo/vector-icons/Entypo';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'
@@ -8,6 +8,10 @@ import CardScreen from './app/screens/CardScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
 import StackNavigation from './app/scripts/StackNavigation';
+
+import TopMenu from './app/screens/TopMenuDisplay.js'
+import BottomMenu from './app/screens/BottomMenuDisplay.js'
+import { MainAppStyles } from './app/styles/styles.js';
 
 
 export default function App() {
@@ -52,7 +56,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <StackNavigation />
+        <StackNavigation />
+        <TopMenu />
+        <BottomMenu />
     </NavigationContainer>
       
   );

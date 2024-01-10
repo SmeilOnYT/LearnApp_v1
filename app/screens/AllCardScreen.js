@@ -2,7 +2,9 @@ import React from 'react';
 import { SafeAreaView, TouchableHighlight, View, StyleSheet, Text, Image, ScrollView } from 'react-native';
 import { MainAppStyles } from '../styles/styles.js'
 import { useNavigation } from '@react-navigation/native';
-import Menu from '../screens/TopMenuDisplay.js'
+
+import TopMenu from '../screens/TopMenuDisplay.js'
+import BottomMenu from '../screens/BottomMenuDisplay.js'
 
 function AllCardScreen(){
     const navigation = useNavigation();
@@ -12,8 +14,7 @@ function AllCardScreen(){
     }
 
     return(
-        <View>
-            <Menu />
+        <View style={MainAppStyles.screen}>
             <ScrollView style={MainAppStyles.contentWindow}>
                 <Text style={MainAppStyles.pageHeader} onPress={goBack}>Back</Text>
             </ScrollView>

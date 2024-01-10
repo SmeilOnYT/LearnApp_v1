@@ -93,13 +93,13 @@ function UpdateDeckProgress(decks){
 function CardScreen(){
     return (
         <View style={MainAppStyles.screen}>
-            <TopMenu />
+
             <ScrollView style={MainAppStyles.contentWindow}>
                 <Text style={MainAppStyles.pageHeader}>Decks</Text>
                 <DecksList decks = {decks} />
                 <Text style={[MainAppStyles.pageHeader, {paddingTop: 25}]}>Learn</Text>
             </ScrollView>
-            <BottomMenu />
+            
         </View> 
             
         );

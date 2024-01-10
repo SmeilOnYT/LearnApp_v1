@@ -6,12 +6,17 @@ import AllCardScreen from '../screens/AllCardScreen.js';
 
 const Stack = createStackNavigator();
 
+/*
+screenOptions={{
+            animationEnabled: false,
+            }}
+*/
+
 const StackNavigation = () => {
     return (
         <Stack.Navigator
-        screenOptions={{
-            animationEnabled: false,
-        }}>
+        
+        >
             <Stack.Screen 
                 name='CardScreen' 
                 component={CardScreen} 
