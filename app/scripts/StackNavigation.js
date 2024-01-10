@@ -8,7 +8,10 @@ const Stack = createStackNavigator();
 
 const StackNavigation = () => {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator
+        screenOptions={{
+            animationEnabled: false,
+        }}>
             <Stack.Screen 
                 name='CardScreen' 
                 component={CardScreen} 
