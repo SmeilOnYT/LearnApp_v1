@@ -3,6 +3,8 @@ import { SafeAreaView, View, Text, Image, ScrollView } from 'react-native';
 
 import { MainAppStyles } from '../styles/styles.js'
 import DecksList from "../scripts/DeckList.js"
+import TopMenu from '../screens/TopMenuDisplay.js'
+import BottomMenu from '../screens/BottomMenuDisplay.js'
 
 /*
     All of the variables will be removed later on and everything will be stored inside the Array.
@@ -80,50 +82,26 @@ function UpdateDeckProgress(decks){
         decks[i].deckProgressNum = DeckProgressBar(decks[i].deckCardCount, decks[i].deckRightCardCount);
     }
 }
-
-function CardScreen(){
-    return (
-        <View style={MainAppStyles.screen}>
-            <View style={MainAppStyles.topMenu}>
-                <SafeAreaView style={MainAppStyles.topMenuItemContainer}>
-                    <View style={MainAppStyles.topMenuDataContainer}>
-                        <View style={[MainAppStyles.topMenuDataContainer, MainAppStyles.topMenuSingleDataContainer]}>
-    
-                            <Image source={require("../assets/Streak_white_v1-01.png")} style={MainAppStyles.topMenuDataIcon}/>
-                            <Text style={MainAppStyles.BasicText}>25</Text>
-    
-                        </View>
-                        <View style={MainAppStyles.topMenuDataContainer}>
-    
-                            <Image source={require("../assets/Icon_Clock_small_white_v1-01.png")} style={MainAppStyles.topMenuDataIcon}/>
-                            <Text style={MainAppStyles.BasicText}>345</Text>
-    
-                        </View>
-                    </View>
-                    
-                    <Image source={require("../assets/Icon_Account_v2-01.png")} style={MainAppStyles.topMenuProfile}/>
-    
-                </SafeAreaView>
-            </View>
-
+/*
             <ScrollView style={MainAppStyles.contentWindow}>
                 <Text style={MainAppStyles.pageHeader}>Decks</Text>
                 <DecksList decks = {decks} />
                 <Text style={[MainAppStyles.pageHeader, {paddingTop: 25}]}>Learn</Text>
             </ScrollView>
+*/
 
-            <View style={MainAppStyles.bottomMenu}>
-                <SafeAreaView style={MainAppStyles.bottomMenuItemContainer}>
-    
-                    <Image source={require("../assets/Icon_Learn_white_selected_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>
-                    <Image source={require("../assets/Icon_Habit_white_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>
-                    <Image source={require("../assets/Icon_Home_white_outlines_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>
-                    <Image source={require("../assets/Icon_Calendar_white_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>
-                    <Image source={require("../assets/Icon_Clock_white_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>
-    
-                </SafeAreaView>
-            </View>
-        </View>
+function CardScreen(){
+    return (
+        <View style={MainAppStyles.screen}>
+            <TopMenu />
+            <ScrollView style={MainAppStyles.contentWindow}>
+                <Text style={MainAppStyles.pageHeader}>Decks</Text>
+                <DecksList decks = {decks} />
+                <Text style={[MainAppStyles.pageHeader, {paddingTop: 25}]}>Learn</Text>
+            </ScrollView>
+            <BottomMenu />
+        </View> 
+            
         );
 }
 
