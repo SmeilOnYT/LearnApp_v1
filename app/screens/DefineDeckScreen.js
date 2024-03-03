@@ -12,9 +12,6 @@ import {
 import { MainAppStyles } from "../styles/styles.js";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
-import TopMenu from "./TopMenuDisplay.js";
-import BottomMenu from "./BottomMenuDisplay.js";
-
 function DefineDeckScreen({ deck }) {
   const navigation = useNavigation();
   const route = useRoute();
@@ -43,7 +40,7 @@ function DefineDeckScreen({ deck }) {
               source={require("../assets/Back_white_v1-01.png")}
               style={MainAppStyles.backButton}
             ></Image>
-            
+
             <View style={MainAppStyles.statisticsContainer}>
               <Text style={MainAppStyles.statisticWordStyle}>
                 <Text style={MainAppStyles.statisticRedPreviewNumStyle}>
