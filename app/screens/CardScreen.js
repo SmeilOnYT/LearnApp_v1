@@ -93,7 +93,7 @@ function UpdateDeckProgress(decks){
 function CardScreen(){
     return (
         <View style={MainAppStyles.screen}>
-
+            <TopMenu></TopMenu>
             <ScrollView style={MainAppStyles.contentWindow}>
                 <Text style={MainAppStyles.pageHeader}>Decks</Text>
                 <DecksList decks = {decks} />

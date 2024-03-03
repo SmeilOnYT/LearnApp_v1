@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const ContentBackgroundColor = "#393939"
+const ContentBackgroundColor = "#50545B"
 
 export const DeckSummaryStyles = StyleSheet.create({
     deckContainer:{
@@ -54,14 +54,14 @@ export const DeckSummaryStyles = StyleSheet.create({
     deckProgressBarBG:{
         width: 311,
         height: 12,
-        backgroundColor: "#535353",
+        backgroundColor: "#3C4148",
         borderRadius: 50,
         flexDirection: "row",
 
     },
     deckProgressBar:{
         height: 12,
-        backgroundColor: "#ffffff",
+        backgroundColor: "#ED464A",
         borderRadius: 50,
         width: 50,
     },

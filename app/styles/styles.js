@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const MenuStrokeWidth = 2;
 const MenuBorderRadius = 35;
-const BaseBackgroundColor = "#232323";
+const BaseBackgroundColor = "#20242A";
 const MenuBackgroundColor = "#535353";
 const MenuBackgroundStrokeColor = "#838383";
 
@@ -21,11 +21,7 @@ export const MainAppStyles = StyleSheet.create({
         left: 0,
         right: 0,
         height: 125 /*+ MenuPushUpward*/,
-        backgroundColor: MenuBackgroundColor,
-        borderRadius: MenuBorderRadius,
-        borderWidth: MenuStrokeWidth,
-        borderColor: MenuBackgroundStrokeColor,
-        marginTop: -MenuStrokeWidth,
+        marginTop: 5,
         paddingHorizontal: 20,
         paddingBottom: 30,
         paddingTop: 30,
@@ -106,5 +102,10 @@ export const MainAppStyles = StyleSheet.create({
         color: "#ffffff",
         fontSize: 30,
         paddingBottom: 15,
-    }
+    },
+    profileBG:{
+        width: 50,
+        height: 50,
+        color: "#3C4148",
+    },
 })

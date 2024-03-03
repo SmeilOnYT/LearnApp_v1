@@ -22,7 +22,9 @@ function TopMenuDisplay(){
     
                         </View>
                     </View>
-                    <Image source={require("../assets/Icon_Account_v2-01.png")} style={MainAppStyles.topMenuProfile}/>
+                    <View style={MainAppStyles.profileBG}>
+
+                    </View>
                 </SafeAreaView>
             </View>
     )
