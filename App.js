@@ -57,7 +57,6 @@ export default function App() {
   return (
     <NavigationContainer>
         <StackNavigation />
-        <TopMenu />
         <BottomMenu />
     </NavigationContainer>
       
