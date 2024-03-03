@@ -87,7 +87,13 @@ export const MainAppStyles = StyleSheet.create({
 
 
 
-
+    scrollViewContainer:{
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 30, // Adjust left padding
+        right: 30,
+    },
 
 
     contentWindow:{
@@ -104,10 +110,8 @@ export const MainAppStyles = StyleSheet.create({
     },
     contentWindowWithoutBack:{
         top: 100,
-        left: 30,
-        right: 30,
         bottom: 100,
-        flexGrow: 1,
+        justifyContent: 'center',
     },
     screenHeader:{
         top: 0,
@@ -147,7 +151,11 @@ export const MainAppStyles = StyleSheet.create({
 
 
 
-
+    statisticsContainer: {
+        flex: 1, // Fill available space horizontally
+        paddingLeft: 30,
+        paddingRight: 30,
+    },
 
 
 
@@ -185,9 +193,9 @@ export const MainAppStyles = StyleSheet.create({
         
     },
     contentDivider:{
-        flexGrow: 1,
         height: 2,
-        backgroundColor: "#ffffff",
-        alignSelf: "center",
+        backgroundColor: "#3C4148",
+        borderRadius: 10,
+        marginVertical: 20,
     },
 })
