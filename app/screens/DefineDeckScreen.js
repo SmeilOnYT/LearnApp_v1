@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, TouchableHighlight, View, StyleSheet, Text, Image, ScrollView } from 'react-native';
+import { SafeAreaView, TouchableHighlight, View, StyleSheet, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { MainAppStyles } from '../styles/styles.js'
 import { useNavigation, useRoute } from '@react-navigation/native';
 
@@ -16,9 +16,25 @@ function DefineDeckScreen({deck}){
 
     return(
         <View style={MainAppStyles.screen}>
-            <ScrollView style={MainAppStyles.contentWindow}>
-                <Text style={MainAppStyles.pageHeader} onPress={goBack}>Back</Text>
-                <Text></Text>
+            <View style={MainAppStyles.contentWindowWithoutHeader}>
+                <TouchableOpacity onPress={goBack}>
+                <Image source={require("../assets/Back_white_v1-01.png")} style={MainAppStyles.backButton}></Image>
+                </TouchableOpacity>
+            </View>
+            <ScrollView style={MainAppStyles.contentWindowWithoutBack}>
+                <View style={MainAppStyles.statisticSummary}>
+                    <Image source={require("../assets/Back_white_v1-01.png")} style={MainAppStyles.backButton}></Image>
+                    <View>
+                        <Text style={MainAppStyles.statisticWordStyle}><Text style={MainAppStyles.statisticRedPreviewNumStyle}>50%</Text> Completion</Text>
+                        <Text style={MainAppStyles.statisticWordStyle}><Text style={MainAppStyles.statisticRedPreviewNumStyle}>210</Text> Total Reviews</Text>
+                        <Text style={MainAppStyles.statisticWordStyle}><Text style={MainAppStyles.statisticRedPreviewNumStyle}>46</Text> Minutes Learned</Text>
+                    </View>
+                </View>
+                <TouchableOpacity style={MainAppStyles.seeAllStatisticsButton}>
+                    <Text style={MainAppStyles.seeAllStatisticsButtonText}>See Statistics</Text>
+                </TouchableOpacity>
+                <View style={MainAppStyles.contentDivider}></View>
+                
             </ScrollView>
         </View>
         

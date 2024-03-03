@@ -15,6 +15,7 @@ function BottomMenuDisplay(){
                     <Image source={require("../assets/Icon_Clock_white_v1-01.png")} style={MainAppStyles.bottomMenuDataIcon}/>
     
                 </SafeAreaView>
+                <View style={MainAppStyles.pageSelectorBeam}></View>
         </View>
     )
 }

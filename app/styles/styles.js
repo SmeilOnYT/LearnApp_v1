@@ -53,18 +53,14 @@ export const MainAppStyles = StyleSheet.create({
 
     bottomMenu:{
         position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: 100,
-        backgroundColor: MenuBackgroundColor,
-        borderRadius: MenuBorderRadius,
-        borderWidth: MenuStrokeWidth,
-        borderColor: MenuBackgroundStrokeColor,
-        marginBottom: -MenuStrokeWidth,
+        bottom: 25,
+        left: 20,
+        right: 20,
+        height: 65,
+        backgroundColor: "#3C4148",
+        borderRadius: 25,
         paddingHorizontal: 20,
-        paddingBottom: 30,
-        paddingTop: 30,
+        justifyContent: "center"
     },
     bottomMenuItemContainer:{
         flexDirection: 'row',
@@ -73,16 +69,45 @@ export const MainAppStyles = StyleSheet.create({
         marginHorizontal: 10,
     },
     bottomMenuDataIcon:{
-        width: 35,
-        height: 35,
-        marginTop: -8,
+        width: 30,
+        height: 30,
     },
+    pageSelectorBeam:{
+        width: 40,
+        height: 5,
+        backgroundColor: "#ED464A",
+        borderRadius: 10,
+        position: 'absolute',
+        bottom: 0,
+        left: 25,
+    },
+
+
+
+
+
+
+
+
 
     contentWindow:{
         top: 150,
         left: 30,
         right: 30,
         bottom: 100,
+    },
+    contentWindowWithoutHeader:{
+        top: 75,
+        left: 30,
+        right: 30,
+        bottom: 100,
+    },
+    contentWindowWithoutBack:{
+        top: 100,
+        left: 30,
+        right: 30,
+        bottom: 100,
+        flexGrow: 1,
     },
     screenHeader:{
         top: 0,
@@ -112,5 +137,57 @@ export const MainAppStyles = StyleSheet.create({
         borderRadius: 10,
         marginTop: 8,
         marginBottom: 15,
+    },
+
+    backButton:{
+        height: 40,
+        width: 40,
+        marginLeft: -6,
+    },
+
+
+
+
+
+
+
+    /*------------------------*/
+    /* Muss noch in separate Datei getan werden */
+
+    statisticRedPreviewNumStyle:{
+        color: "#ED464A",
+        fontFamily: "Poppins-SemiBold"
+    },
+
+    statisticWordStyle:{
+        color: "#ffffff",
+        fontFamily: "Poppins-Regular",
+        fontSize: 18,
+        marginVertical: 4,
+    },
+    statisticSummary:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: "center",
+    },
+    seeAllStatisticsButton:{
+        marginTop: 20,
+        backgroundColor: "#50545B",
+        width: 200,
+        alignItems: "center",
+        borderRadius: 10,
+    },
+    seeAllStatisticsButtonText:{
+        fontFamily: 'Poppins-LightItalic',
+        color: "#ffffff",
+        fontSize: 16,
+        margin: 8,
+        
+    },
+    contentDivider:{
+        flexGrow: 1,
+        height: 2,
+        backgroundColor: "#ffffff",
+        alignSelf: "center",
     },
 })
