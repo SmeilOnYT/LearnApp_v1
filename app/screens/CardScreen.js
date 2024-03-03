@@ -96,8 +96,13 @@ function CardScreen(){
             <TopMenu></TopMenu>
             <ScrollView style={MainAppStyles.contentWindow}>
                 <Text style={MainAppStyles.pageHeader}>Decks</Text>
+
+                <View style={MainAppStyles.titleDivider}></View>
+
                 <DecksList decks = {decks} />
                 <Text style={[MainAppStyles.pageHeader, {paddingTop: 25}]}>Learn</Text>
+
+                <View style={MainAppStyles.titleDivider}></View>
             </ScrollView>
             
         </View> 

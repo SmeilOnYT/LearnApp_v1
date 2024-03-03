@@ -23,7 +23,7 @@ function TopMenuDisplay(){
                         </View>
                     </View>
                     <View style={MainAppStyles.profileBG}>
-
+                        <Text>Profile</Text>
                     </View>
                 </SafeAreaView>
             </View>

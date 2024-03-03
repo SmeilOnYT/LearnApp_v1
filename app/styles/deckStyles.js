@@ -53,14 +53,14 @@ export const DeckSummaryStyles = StyleSheet.create({
     },
     deckProgressBarBG:{
         width: 311,
-        height: 12,
+        height: 10,
         backgroundColor: "#3C4148",
         borderRadius: 50,
         flexDirection: "row",
 
     },
     deckProgressBar:{
-        height: 12,
+        height: 10,
         backgroundColor: "#ED464A",
         borderRadius: 50,
         width: 50,

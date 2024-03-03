@@ -20,22 +20,16 @@ export const MainAppStyles = StyleSheet.create({
         top: 0,
         left: 0,
         right: 0,
-        height: 125 /*+ MenuPushUpward*/,
-        marginTop: 5,
+        height: 125,
+        marginTop: 40,
         paddingHorizontal: 20,
         paddingBottom: 30,
         paddingTop: 30,
-        //marginTop: -MenuPushUpward,
-  
     },
     topMenuItemContainer:{
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: "center",
-    },
-    topMenuProfile:{
-        width: 50,
-        height: 50,
     },
     topMenuDataContainer:{
         flexDirection: 'row',
@@ -101,11 +95,22 @@ export const MainAppStyles = StyleSheet.create({
         fontFamily: "Poppins-SemiBold",
         color: "#ffffff",
         fontSize: 30,
-        paddingBottom: 15,
     },
     profileBG:{
         width: 50,
         height: 50,
-        color: "#3C4148",
+        backgroundColor: "#3C4148",
+        borderRadius: 12,
+        justifyContent: 'center',
+        alignItems: "center",
+    },
+
+    titleDivider:{
+        height: 3,
+        width: 70,
+        backgroundColor: "#ED464A",
+        borderRadius: 10,
+        marginTop: 8,
+        marginBottom: 15,
     },
 })
