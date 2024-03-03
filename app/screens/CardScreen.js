@@ -13,10 +13,10 @@ let decks = [
     { 
         name: "Deck 1", 
         description: "Description 1", 
-        deckCardCount: 20, 
+        deckCardCount: 30, 
         deckRightCardCount: 10,
-        deckProgress: DeckProgressPercentage(20, 10), 
-        deckProgressNum: DeckProgressBar(20, 10),
+        deckProgress: DeckProgressPercentage(30, 10), 
+        deckProgressNum: DeckProgressBar(30, 10),
     },
     { 
         name: "Deck 2", 

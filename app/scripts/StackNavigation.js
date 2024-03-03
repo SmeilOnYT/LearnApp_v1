@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import CardScreen from '../screens/CardScreen.js';
-import AllCardScreen from '../screens/AllCardScreen.js';
+import DefineDeckScreen from '../screens/DefineDeckScreen.js';
 
 const Stack = createStackNavigator();
 
@@ -24,7 +24,7 @@ const StackNavigation = () => {
             />
             <Stack.Screen 
                 name='AllCardScreen' 
-                component={AllCardScreen} 
+                component={DefineDeckScreen} 
                 options={{headerShown: false}}
             />
         </Stack.Navigator>
