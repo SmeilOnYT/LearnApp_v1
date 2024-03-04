@@ -14,6 +14,7 @@ import { MainAppStyles } from "../styles/styles.js";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 import { mainStyles } from "../styles/mainStyles.js";
+import { NAV_WINDOW_HEIGHT } from '../scripts/AppValues';
 
 function DeckInfoScreen({ deck }) {
   const navigation = useNavigation();
@@ -26,7 +27,7 @@ function DeckInfoScreen({ deck }) {
   const calcScrollViewHeight = () => {
     const screenHeight = Dimensions.get('window').height;
       const statusBarHeight = StatusBar.currentHeight || 0;
-      const navWindowHeight = 60;
+      const navWindowHeight = NAV_WINDOW_HEIGHT;
       const excludedHeight = statusBarHeight + navWindowHeight + 160;
 
       return screenHeight - excludedHeight;
