@@ -29,7 +29,8 @@ function DeckInfoScreen({ deck }) {
   const calcScrollViewHeight = () => {
     const screenHeight = Dimensions.get("window").height;
     const statusBarHeight = StatusBar.currentHeight || 0;
-    const excludedHeight = statusBarHeight + NAV_WINDOW_HEIGHT + NAV_WINDOW_MARGIN_TOP + 160;
+    const excludedHeight =
+      statusBarHeight + NAV_WINDOW_HEIGHT + NAV_WINDOW_MARGIN_TOP + 160;
 
     return screenHeight - excludedHeight;
   };
@@ -51,7 +52,31 @@ function DeckInfoScreen({ deck }) {
             { maxHeight: calcScrollViewHeight() },
           ]}
         >
-          <Text>Test</Text>
+          <View style={mainStyles.statistic_summary_container}>
+            <Image
+              source={require("../assets/Back_white_v1-01.png")}
+              style={MainAppStyles.backButton}
+            ></Image>
+            <View style={mainStyles.statistic_summary_text_container}>
+              <Text style={mainStyles.statistic_text_style}>
+                <Text style={mainStyles.statistic_text_marked_style}>50%</Text>{" "}
+                Completion
+              </Text>
+              <Text style={mainStyles.statistic_text_style}>
+                <Text style={mainStyles.statistic_text_marked_style}>210</Text>{" "}
+                Total Reviews
+              </Text>
+              <Text style={mainStyles.statistic_text_style}>
+                <Text style={mainStyles.statistic_text_marked_style}>46</Text>{" "}
+                Minutes Learned
+              </Text>
+            </View>
+          </View>
+          <TouchableOpacity style={mainStyles.see_all_statistics_button}>
+            <Text style={mainStyles.see_all_statistics_button_text}>
+              See Statistics
+            </Text>
+          </TouchableOpacity>
         </ScrollView>
       </SafeAreaView>
     </View>

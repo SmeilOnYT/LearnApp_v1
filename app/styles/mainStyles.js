@@ -22,6 +22,46 @@ export const mainStyles = StyleSheet.create({
     scroll_window:{
         flex: 1,
         /*backgroundColor: "#999999",*/
-    }
+    },
+    content_divider:{
+        height: 2,
+        backgroundColor: "#3C4148",
+        borderRadius: 10,
+        marginVertical: 20,
+    },
+
+    /* DeckInfoScreen - styles */
+    statistic_summary_container:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: "center",
+    },
+    statistic_summary_text_container:{
+        flex: 1,
+    },
+    statistic_text_style:{
+        color: "#ffffff",
+        fontFamily: "Poppins-Regular",
+        fontSize: 18,
+        marginVertical: 4,
+    },
+    statistic_text_marked_style:{
+        color: "#ED464A",
+        fontFamily: "Poppins-SemiBold"
+    },
+    see_all_statistics_button:{
+        marginTop: 20,
+        backgroundColor: "#50545B",
+        width: 200,
+        alignItems: "center",
+        borderRadius: 10,
+    },
+    see_all_statistics_button_text:{
+        fontFamily: 'Poppins-LightItalic',
+        color: "#ffffff",
+        fontSize: 16,
+        margin: 8,
+    },
+
 
 });
