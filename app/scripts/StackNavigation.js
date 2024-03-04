@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import CardScreen from '../screens/CardScreen.js';
 import DefineDeckScreen from '../screens/DefineDeckScreen.js';
+import DeckInfoScreen from '../screens/DeckInfoScreen.js';
 
 const Stack = createStackNavigator();
 
@@ -24,7 +25,7 @@ const StackNavigation = () => {
             />
             <Stack.Screen 
                 name='AllCardScreen' 
-                component={DefineDeckScreen} 
+                component={DeckInfoScreen} 
                 options={{headerShown: false}}
             />
         </Stack.Navigator>
