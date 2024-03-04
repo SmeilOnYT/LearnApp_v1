@@ -15,6 +15,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { mainStyles } from "../styles/mainStyles.js";
 
 import Circular_Progress_Bar from "../scripts/Circular_Progress_Bar.js";
+import Deck_To_Dos from "../scripts/Deck_To_Dos.js";
 
 import { NAV_WINDOW_HEIGHT } from "../scripts/AppValues";
 import { NAV_WINDOW_MARGIN_TOP } from "../scripts/AppValues";
@@ -36,6 +37,8 @@ function DeckInfoScreen({ deck }) {
     return screenHeight - excludedHeight;
   };
 
+  const todoItems = ["Repeat Flashcards", "+20 Flashcards"];
+
   return (
     <View style={mainStyles.screen}>
       <SafeAreaView style={mainStyles.container}>
@@ -54,7 +57,7 @@ function DeckInfoScreen({ deck }) {
           ]}
         >
           <View style={mainStyles.statistic_summary_container}>
-            <Circular_Progress_Bar progress={75} radius={50} strokeWidth={10} />
+            <Circular_Progress_Bar progress={50} radius={50} strokeWidth={10} />
             <View style={mainStyles.statistic_summary_text_container}>
               <Text style={mainStyles.statistic_text_style}>
                 <Text style={mainStyles.statistic_text_marked_style}>50%</Text>{" "}
@@ -78,6 +81,7 @@ function DeckInfoScreen({ deck }) {
           <View style={mainStyles.content_divider}></View>
 
           <Text style={mainStyles.h2_heading}>To Do's</Text>
+          <Deck_To_Dos items={todoItems} />
 
           <View style={mainStyles.content_divider}></View>
 
