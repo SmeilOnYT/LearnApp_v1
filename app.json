@@ -7,9 +7,9 @@
     "icon": "./app/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./app/assets/splash.png",
+      "image": "./app/assets/Maven_Logo_freigestellt_v1.png",
       "resizeMode": "contain",
-      "backgroundColor": "#232323"
+      "backgroundColor": "#20242A"
     },
     "assetBundlePatterns": [
       "**/*"
