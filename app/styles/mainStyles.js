@@ -29,6 +29,16 @@ export const mainStyles = StyleSheet.create({
         borderRadius: 10,
         marginVertical: 20,
     },
+    h1_heading:{
+        fontFamily: "Poppins-SemiBold",
+        fontSize: 25,
+        color: "#ffffff",
+    },
+    h2_heading:{
+        fontFamily: "Poppins-SemiBold",
+        fontSize: 22,
+        color: "#ffffff",
+    },
 
     /* DeckInfoScreen - styles */
     statistic_summary_container:{
@@ -38,11 +48,12 @@ export const mainStyles = StyleSheet.create({
     },
     statistic_summary_text_container:{
         flex: 1,
+        marginLeft: 20,
     },
     statistic_text_style:{
         color: "#ffffff",
         fontFamily: "Poppins-Regular",
-        fontSize: 18,
+        fontSize: 16,
         marginVertical: 4,
     },
     statistic_text_marked_style:{

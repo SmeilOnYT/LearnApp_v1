@@ -67,7 +67,6 @@ function DefineDeckScreen({ deck }) {
               See Statistics
             </Text>
           </TouchableOpacity>
-
           <View style={MainAppStyles.contentDivider}></View>
         </ScrollView>
       </View>

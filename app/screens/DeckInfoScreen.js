@@ -14,6 +14,8 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 
 import { mainStyles } from "../styles/mainStyles.js";
 
+import Circular_Progress_Bar from "../scripts/Circular_Progress_Bar.js";
+
 import { NAV_WINDOW_HEIGHT } from "../scripts/AppValues";
 import { NAV_WINDOW_MARGIN_TOP } from "../scripts/AppValues";
 
@@ -52,10 +54,7 @@ function DeckInfoScreen({ deck }) {
           ]}
         >
           <View style={mainStyles.statistic_summary_container}>
-            <Image
-              source={require("../assets/Back_white_v1-01.png")}
-              style={MainAppStyles.backButton}
-            ></Image>
+            <Circular_Progress_Bar progress={75} radius={50} strokeWidth={10} />
             <View style={mainStyles.statistic_summary_text_container}>
               <Text style={mainStyles.statistic_text_style}>
                 <Text style={mainStyles.statistic_text_marked_style}>50%</Text>{" "}
@@ -77,6 +76,12 @@ function DeckInfoScreen({ deck }) {
             </Text>
           </TouchableOpacity>
           <View style={mainStyles.content_divider}></View>
+
+          <Text style={mainStyles.h2_heading}>To Do's</Text>
+
+          <View style={mainStyles.content_divider}></View>
+
+          <Text style={mainStyles.h1_heading}>Spanish</Text>
         </ScrollView>
       </SafeAreaView>
     </View>
