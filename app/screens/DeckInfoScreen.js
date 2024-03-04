@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   SafeAreaView,
   View,
-  StyleSheet,
   Text,
   Image,
   ScrollView,
@@ -77,6 +76,7 @@ function DeckInfoScreen({ deck }) {
               See Statistics
             </Text>
           </TouchableOpacity>
+          <View style={mainStyles.content_divider}></View>
         </ScrollView>
       </SafeAreaView>
     </View>
