@@ -13,7 +13,6 @@ export const mainStyles = StyleSheet.create({
     container:{
         marginHorizontal: 30,
         flex: 1,
-
     },
     nav_window:{
         height: NAV_WINDOW_HEIGHT,
