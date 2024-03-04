@@ -7,14 +7,16 @@ import {
   Image,
   ScrollView,
   TouchableOpacity,
-  Dimensions, 
+  Dimensions,
   StatusBar,
 } from "react-native";
 import { MainAppStyles } from "../styles/styles.js";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 import { mainStyles } from "../styles/mainStyles.js";
-import { NAV_WINDOW_HEIGHT } from '../scripts/AppValues';
+
+import { NAV_WINDOW_HEIGHT } from "../scripts/AppValues";
+import { NAV_WINDOW_MARGIN_TOP } from "../scripts/AppValues";
 
 function DeckInfoScreen({ deck }) {
   const navigation = useNavigation();
@@ -25,13 +27,12 @@ function DeckInfoScreen({ deck }) {
   };
 
   const calcScrollViewHeight = () => {
-    const screenHeight = Dimensions.get('window').height;
-      const statusBarHeight = StatusBar.currentHeight || 0;
-      const navWindowHeight = NAV_WINDOW_HEIGHT;
-      const excludedHeight = statusBarHeight + navWindowHeight + 160;
+    const screenHeight = Dimensions.get("window").height;
+    const statusBarHeight = StatusBar.currentHeight || 0;
+    const excludedHeight = statusBarHeight + NAV_WINDOW_HEIGHT + NAV_WINDOW_MARGIN_TOP + 160;
 
-      return screenHeight - excludedHeight;
-  }
+    return screenHeight - excludedHeight;
+  };
 
   return (
     <View style={mainStyles.screen}>
@@ -44,8 +45,13 @@ function DeckInfoScreen({ deck }) {
             ></Image>
           </TouchableOpacity>
         </View>
-        <ScrollView style={[mainStyles.scroll_window, { maxHeight: calcScrollViewHeight(),}]}>
-            <Text>Test</Text>
+        <ScrollView
+          style={[
+            mainStyles.scroll_window,
+            { maxHeight: calcScrollViewHeight() },
+          ]}
+        >
+          <Text>Test</Text>
         </ScrollView>
       </SafeAreaView>
     </View>

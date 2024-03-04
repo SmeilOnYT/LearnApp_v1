@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 import { NAV_WINDOW_HEIGHT } from '../scripts/AppValues';
+import { NAV_WINDOW_MARGIN_TOP } from '../scripts/AppValues';
 
 const MainBackgroundColor = "#20242A";
 
@@ -10,17 +11,17 @@ export const mainStyles = StyleSheet.create({
         backgroundColor: MainBackgroundColor,
     },
     container:{
-        backgroundColor: "#ffffff",
         marginHorizontal: 30,
         flex: 1,
+
     },
     nav_window:{
-        backgroundColor: "#ff0000",
         height: NAV_WINDOW_HEIGHT,
+        marginTop: NAV_WINDOW_MARGIN_TOP,
     },
     scroll_window:{
-        backgroundColor: "#00ff00",
         flex: 1,
+        /*backgroundColor: "#999999",*/
     }
 
 });
