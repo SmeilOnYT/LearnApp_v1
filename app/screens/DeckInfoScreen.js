@@ -87,11 +87,40 @@ function DeckInfoScreen({ deck }) {
 
           <Text style={mainStyles.h1_heading}>Spanish</Text>
           <View style={mainStyles.small_info_deck_container}>
-            <Image source={require("../assets/Back_white_v1-01.png")} style={mainStyles.small_info_user_icon}></Image>
+            <Image
+              source={require("../assets/Back_white_v1-01.png")}
+              style={mainStyles.small_info_user_icon}
+            ></Image>
             <Text style={mainStyles.small_info_text}>User_123</Text>
             <View style={mainStyles.small_info_divider}></View>
             <Text style={mainStyles.small_info_text}>34 Cards</Text>
           </View>
+          <View style={mainStyles.deck_modify_button_container}>
+            <TouchableOpacity
+              style={[mainStyles.deck_modify_button, { marginRight: 5 }]}
+            >
+              <Text style={mainStyles.deck_learn_modify_button_text}>Add</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[mainStyles.deck_modify_button, { marginLeft: 5 }]}
+            >
+              <Text style={mainStyles.deck_learn_modify_button_text}>Edit</Text>
+            </TouchableOpacity>
+          </View>
+          <TouchableOpacity style={mainStyles.deck_learn_button}>
+            <Text style={mainStyles.deck_learn_modify_button_text}>Anki</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={mainStyles.deck_learn_button}>
+            <Text style={mainStyles.deck_learn_modify_button_text}>
+              Spaced Repetition
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={mainStyles.deck_learn_button}>
+            <Text style={mainStyles.deck_learn_modify_button_text}>
+              Classic Flashcards
+            </Text>
+          </TouchableOpacity>
+          <View style={mainStyles.content_divider}></View>
         </ScrollView>
       </SafeAreaView>
     </View>

@@ -11,15 +11,16 @@ export const mainStyles = StyleSheet.create({
         backgroundColor: MainBackgroundColor,
     },
     container:{
-        marginHorizontal: 30,
         flex: 1,
     },
     nav_window:{
         height: NAV_WINDOW_HEIGHT,
         marginTop: NAV_WINDOW_MARGIN_TOP,
+        paddingHorizontal: 30,
     },
     scroll_window:{
         flex: 1,
+        paddingHorizontal: 30,
         /*backgroundColor: "#999999",*/
     },
     content_divider:{
@@ -95,6 +96,32 @@ export const mainStyles = StyleSheet.create({
         marginHorizontal: 10,
     },
 
-    
+    deck_modify_button_container:{
+        flexDirection: 'row',
+        alignItems: "center",
+    },
+    deck_modify_button:{
+        backgroundColor: "#50545B",
+        flex: 0.5,
+        alignItems: "center",
+        height: 50,
+        justifyContent: "center",
+        borderRadius: 15,
+        marginVertical: 5,
+    },
+    deck_learn_button:{
+        backgroundColor: "#50545B",
+        flex: 1,
+        alignItems: "center",
+        height: 50,
+        justifyContent: "center",
+        borderRadius: 15,
+        marginVertical: 5,
+    },
+    deck_learn_modify_button_text:{
+        color: "#ffffff",
+        fontFamily: "Poppins-SemiBold",
+        fontSize: 16,
+    },
 
 });
