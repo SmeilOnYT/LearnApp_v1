@@ -1,17 +1,13 @@
-import React, { useCallback, useEffect, useState, View } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 //import Entypo from '@expo/vector-icons/Entypo';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'
-
-import HomeScreen from './app/screens/HomeScreenV2';
-import CardScreen from './app/screens/CardScreen';
+import * as SQLite from 'expo-sqlite'
 
 import { NavigationContainer } from '@react-navigation/native';
 import StackNavigation from './app/scripts/StackNavigation';
 
-import TopMenu from './app/screens/TopMenuDisplay.js'
 import BottomMenu from './app/screens/BottomMenuDisplay.js'
-import { MainAppStyles } from './app/styles/styles.js';
 
 
 export default function App() {
