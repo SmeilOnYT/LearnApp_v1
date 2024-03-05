@@ -73,5 +73,28 @@ export const mainStyles = StyleSheet.create({
         margin: 8,
     },
 
+    small_info_deck_container:{
+        flexDirection: 'row',
+        alignItems: "center",
+        marginVertical: 10,
+    },
+    small_info_user_icon:{
+        width: 30,
+        height: 30,
+        marginRight: 5,
+    },
+    small_info_text:{
+        color: "#ffffff",
+        fontFamily: "Poppins-Regular",
+        fontSize: 16,
+    },
+    small_info_divider:{
+        width: 3,
+        height: 30,
+        backgroundColor: "#ED464A",
+        marginHorizontal: 10,
+    },
+
+    
 
 });

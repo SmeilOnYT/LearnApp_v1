@@ -86,6 +86,12 @@ function DeckInfoScreen({ deck }) {
           <View style={mainStyles.content_divider}></View>
 
           <Text style={mainStyles.h1_heading}>Spanish</Text>
+          <View style={mainStyles.small_info_deck_container}>
+            <Image source={require("../assets/Back_white_v1-01.png")} style={mainStyles.small_info_user_icon}></Image>
+            <Text style={mainStyles.small_info_text}>User_123</Text>
+            <View style={mainStyles.small_info_divider}></View>
+            <Text style={mainStyles.small_info_text}>34 Cards</Text>
+          </View>
         </ScrollView>
       </SafeAreaView>
     </View>
