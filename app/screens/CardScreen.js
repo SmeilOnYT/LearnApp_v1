@@ -41,7 +41,7 @@ function DeckProgressBar(CardCount, RightCount){
     if(percentage >= 0.05)
         return percentage *  311; //Value by Design
     else 
-        return 12; //Value by Design
+        return 12; //Value by Design test
 }
 
 function DeckProgressPercentage(CardCount, RightCount){
