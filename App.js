@@ -2,16 +2,17 @@ import React, { useCallback, useEffect, useState } from 'react';
 //import Entypo from '@expo/vector-icons/Entypo';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'
-import * as SQLite from 'expo-sqlite'
 
 import { NavigationContainer } from '@react-navigation/native';
-import StackNavigation from './app/scripts/StackNavigation';
 
+import StackNavigation from './app/scripts/StackNavigation';
 import BottomMenu from './app/screens/BottomMenuDisplay.js'
+import { insertItem, getAllItems} from './app/databases/deck_database.js'
 
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
+
 
   useEffect(() => {
     async function prepare() {
@@ -23,6 +24,11 @@ export default function App() {
           'Poppins-Regular': require("./app/assets/fonts/Poppins-Regular.ttf"),
           'Poppins-SemiBold': require("./app/assets/fonts/Poppins-SemiBold.ttf"),
         });
+
+        await insertItem("BeispielItem");
+        const items = await getAllItems();
+        console.log("Alle Elemente: ", items);
+
       } catch (e) {
         console.warn(e);
         console.error("Error loading fonts: ", error)

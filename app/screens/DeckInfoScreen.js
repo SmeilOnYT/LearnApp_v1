@@ -17,8 +17,7 @@ import { mainStyles } from "../styles/mainStyles.js";
 import Circular_Progress_Bar from "../scripts/Circular_Progress_Bar.js";
 import Deck_To_Dos from "../scripts/Deck_To_Dos.js";
 
-import { NAV_WINDOW_HEIGHT } from "../scripts/AppValues";
-import { NAV_WINDOW_MARGIN_TOP } from "../scripts/AppValues";
+import { NAV_WINDOW_HEIGHT, NAV_WINDOW_MARGIN_TOP } from "../scripts/AppValues";
 
 function DeckInfoScreen({ deck }) {
   const navigation = useNavigation();
